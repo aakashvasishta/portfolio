@@ -47,35 +47,32 @@ function computePCA2D(rows: number[][]): { pc1: number[]; pc2: number[]; var1: n
 export function PCAScatter() {
   const students = useCS4Students()
 
-  const traces = useMemo<Data[]>(() => {
-    if (!students) return []
+  const { traces, var1, var2 } = useMemo(() => {
+    if (!students) return { traces: [] as Data[], var1: 0, var2: 0 }
 
-    const rows  = students.map(s => [s.completion_rate * 100, s.assessment_score])
-    const { pc1, pc2, var1, var2 } = computePCA2D(rows)
+    const rows = students.map(s => [s.completion_rate * 100, s.assessment_score])
+    const pca  = computePCA2D(rows)
 
-    return PROGRAMS.map((prog, i) => {
+    const traces = PROGRAMS.map((prog, i) => {
       const idx = students.map((s, j) => s.program === prog ? j : -1).filter(j => j >= 0)
       return {
         type: 'scatter',
         mode: 'markers',
         name: prog,
-        x: idx.map(j => pc1[j]),
-        y: idx.map(j => pc2[j]),
-        text: idx.map(j => `${students[j].program} · score ${students[j].assessment_score}`),
+        x: idx.map(j => pca.pc1[j]),
+        y: idx.map(j => pca.pc2[j]),
+        text: idx.map(j => `${prog} · score ${students[j].assessment_score}`),
         hovertemplate: '%{text}<br>PC1: %{x:.2f}  PC2: %{y:.2f}<extra></extra>',
         marker: { color: okabeIto[i], size: 6, opacity: 0.65 },
-        _var1: var1,
-        _var2: var2,
       } as Data
     })
+
+    return { traces, var1: pca.var1, var2: pca.var2 }
   }, [students])
 
-  const { var1, var2 } = useMemo(() => {
-    if (!students) return { var1: 0, var2: 0 }
-    const rows = students.map(s => [s.completion_rate * 100, s.assessment_score])
-    const r = computePCA2D(rows)
-    return { var1: r.var1, var2: r.var2 }
-  }, [students])
+  if (!students) {
+    return <div className="w-full h-full animate-pulse rounded-lg bg-slate-200 dark:bg-slate-700" />
+  }
 
   return (
     <PlotlyChart

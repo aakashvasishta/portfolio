@@ -5,7 +5,7 @@ import { ChartFrame } from '../components/charts/ChartFrame'
 import { RevenueConcentrationBar } from '../components/charts/samples/RevenueConcentrationBar'
 
 const stats = [
-  { value: '20+', label: 'Visualizations' },
+  { value: '25+', label: 'Visualizations' },
   { value: '4', label: 'Case studies' },
   { value: '3', label: 'Chart libraries' },
   { value: '50K+', label: 'Transactions analyzed' },

@@ -68,6 +68,10 @@ export function VolcanoPlot() {
     ] as Data[]
   }, [raw])
 
+  if (!raw) {
+    return <div className="w-full h-full animate-pulse rounded-lg bg-slate-200 dark:bg-slate-700" />
+  }
+
   return (
     <PlotlyChart
       data={traces}

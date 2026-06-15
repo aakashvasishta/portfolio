@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { useCS2Employees } from '../../../data/loaders'
+import { useChartTheme } from '../../../hooks/useChartTheme'
 import { PlotlyChart } from '../PlotlyChart'
 import type { Data, Layout } from 'plotly.js'
 
@@ -18,6 +19,7 @@ function pearson(xs: number[], ys: number[]): number {
 
 export function CorrelationMatrix() {
   const employees = useCS2Employees()
+  const theme = useChartTheme()
 
   const { matrix, annotations } = useMemo(() => {
     if (!employees) return { matrix: [] as number[][], annotations: [] }
@@ -34,24 +36,28 @@ export function CorrelationMatrix() {
         showarrow: false,
         font: {
           size: 12,
-          color: Math.abs(matrix[i][j]) > 0.45 ? '#ffffff' : '#334155',
+          color: Math.abs(matrix[i][j]) > 0.45
+            ? '#ffffff'
+            : theme.isDark ? '#e2e8f0' : '#334155',
           family: "'JetBrains Mono', monospace",
         },
       }))
     )
     return { matrix, annotations }
-  }, [employees])
+  }, [employees, theme.isDark])
 
   if (!employees) {
-    return <div className="animate-pulse rounded-lg bg-slate-200 dark:bg-slate-700 h-full" />
+    return <div className="w-full h-full animate-pulse rounded-lg bg-slate-200 dark:bg-slate-700" />
   }
+
+  const midColor = theme.isDark ? '#1e293b' : '#f1f5f9'
 
   const trace: Data = {
     type: 'heatmap',
     z: matrix,
     x: LABELS,
     y: LABELS,
-    colorscale: [[0, '#0072B2'], [0.5, '#f1f5f9'], [1, '#D55E00']],
+    colorscale: [[0, '#0072B2'], [0.5, midColor], [1, '#D55E00']],
     zmin: -1,
     zmax: 1,
     showscale: true,
