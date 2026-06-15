@@ -1,4 +1,5 @@
 import { ChartFrame } from '../../components/charts/ChartFrame'
+import { ChartGlossary } from '../../components/ui/ChartGlossary'
 import { FunnelDiagram } from '../../components/charts/cs3/FunnelDiagram'
 import { SankeyDiagram } from '../../components/charts/cs3/SankeyDiagram'
 import { KpiScorecard } from '../../components/charts/cs3/KpiScorecard'
@@ -18,6 +19,7 @@ export function CS3ProductFunnel() {
           — a 9% end-to-end conversion rate with predictable drop-off points.
         </p>
         <ChartFrame
+          figNum={1}
           title="Registration → Certified Funnel — % of original cohort shown"
           question="Where in the learner journey does the greatest volume of drop-off occur?"
           method="Each stage tracks users who completed that milestone. Drop-off = users who did not reach the next stage. Percentages are relative to the Registration cohort."
@@ -37,6 +39,7 @@ export function CS3ProductFunnel() {
           showing which sources produce engaged learners vs. passive viewers.
         </p>
         <ChartFrame
+          figNum={2}
           title="Sankey: Source → Journey Type → Outcome"
           question="Which acquisition channels produce learners who complete vs. drop out?"
           method="Flow width is proportional to learner count. Source nodes = acquisition channels; journey nodes = behavioural segment; outcome nodes = final status. Hover for exact counts."
@@ -56,6 +59,7 @@ export function CS3ProductFunnel() {
           supporting KPIs that show current performance, target, and trend direction.
         </p>
         <ChartFrame
+          figNum={3}
           title="North Star + Supporting KPIs — current vs. target with 6-week trend"
           question="Which leading indicators are furthest from target and have the fastest-improving trend?"
           method="North Star = 7-day active learner count. Supporting KPIs selected for causal proximity to the North Star. Sparklines show 6-week rolling values. Progress bar = current ÷ target."
@@ -75,6 +79,7 @@ export function CS3ProductFunnel() {
           later cohorts are improving — the key signal that product changes are working.
         </p>
         <ChartFrame
+          figNum={4}
           title="Weekly Engagement Heatmap — % of cohort still active"
           question="Do later cohorts retain better than earlier ones, and when does the steepest drop occur?"
           method="Each row = a 6-week learner cohort. Values show % still engaging in that subsequent week. W0 = 100% by definition."
@@ -94,6 +99,7 @@ export function CS3ProductFunnel() {
           shows the incremental rate improvement and translates to the North Star via causal pathway.
         </p>
         <ChartFrame
+          figNum={5}
           title="Before / After — Rate improvement per intervention"
           question="Which intervention produces the largest metric movement at its target stage?"
           method="Before = observed rate at the target funnel stage. After = projected rate based on intervention design and historical analogues. Delta shown in percentage points (pp)."
@@ -103,6 +109,44 @@ export function CS3ProductFunnel() {
           <InterventionImpact />
         </ChartFrame>
       </section>
+
+      <ChartGlossary rows={[
+        {
+          fig: 1,
+          chartType: 'Funnel Chart',
+          x: 'user count — continuous (absolute and % of original cohort)',
+          y: 'funnel stage — ordinal, 8 sequential conversion steps',
+          note: 'Sequential bar chart shrinking in proportion to drop-off. Best for pipeline data where every stage is a strict subset of the prior one. Absolute drop-off and conversion rate are readable simultaneously.',
+        },
+        {
+          fig: 2,
+          chartType: 'Sankey Diagram (flow diagram)',
+          x: 'flow volume — continuous, encoded as link width',
+          y: 'source → journey type → outcome — three nominal node layers',
+          note: 'Proportional flow diagram tracing how a population distributes across states and reaches terminal outcomes. Reveals interaction effects between categorical dimensions that bar charts cannot show.',
+        },
+        {
+          fig: 3,
+          chartType: 'KPI Scorecard with Sparklines',
+          x: 'time — ordinal (6 weeks), encoded in each sparkline',
+          y: 'KPI value — continuous, shown as number and progress bar fraction',
+          note: 'Non-chart layout: numeric tiles with embedded micro-charts. Sparklines use a 28 × 80 px Recharts LineChart. Designed for scanning many metrics at once rather than precise reading of any single one.',
+        },
+        {
+          fig: 4,
+          chartType: 'Cohort Engagement Heatmap',
+          x: 'week since cohort start W0–W11 — ordinal time axis',
+          y: 'learner cohort — nominal (6 rows) · colour: engagement rate (continuous 0–100%)',
+          note: 'Same structure as a retention heatmap (Fig. 2 in CS1) but applied to weekly engagement rather than monthly purchases. The two-dimensional matrix lets you compare decay shape and speed across cohorts simultaneously.',
+        },
+        {
+          fig: 5,
+          chartType: 'Grouped Bar Chart (before/after)',
+          x: 'intervention name — nominal (3 groups)',
+          y: 'rate metric — continuous · group: before/after (binary, side-by-side)',
+          note: 'Side-by-side bars comparing two values for each category. Delta labels on the "after" bars convert the visual difference into an explicit number, making percentage-point lift immediately comparable across interventions.',
+        },
+      ]} />
 
     </div>
   )

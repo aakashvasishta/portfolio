@@ -1,4 +1,5 @@
 import { ChartFrame } from '../../components/charts/ChartFrame'
+import { ChartGlossary } from '../../components/ui/ChartGlossary'
 import { RiskScatter } from '../../components/charts/cs4/RiskScatter'
 import { ProgramComparison } from '../../components/charts/cs4/ProgramComparison'
 import { InterventionOutcome } from '../../components/charts/cs4/InterventionOutcome'
@@ -19,6 +20,7 @@ export function CS4EducationOutcomes() {
           student population that separates at-risk students without requiring a complex model.
         </p>
         <ChartFrame
+          figNum={1}
           title="Completion Rate × Assessment Score — at-risk flagged in vermilion"
           question="Do at-risk students cluster predictably in completion–score space, and does this hold across all programs?"
           method="Each point is one of 520 students. At-risk = top 10% by composite risk score (60% weight completion, 40% weight score). Reference lines show the median thresholds used in the initial screening."
@@ -38,6 +40,7 @@ export function CS4EducationOutcomes() {
           whether outcome differences are real or within normal variation.
         </p>
         <ChartFrame
+          figNum={2}
           title="Average Completion Rate and Score — by program"
           question="Does program choice predict materially different outcomes, or are students performing similarly across programs?"
           method="Averages computed over all students in each program. Completion rate is expressed as a percentage; assessment score is on a 0–100 scale. Both metrics shown side-by-side for direct comparison."
@@ -57,6 +60,7 @@ export function CS4EducationOutcomes() {
           assessment scores shows the distribution of outcomes — not just the average.
         </p>
         <ChartFrame
+          figNum={3}
           title="Assessment Score — before and after intervention (box plots)"
           question="Does intervention consistently improve scores, or are gains concentrated in a subset of students?"
           method="Box plots show distribution of pre- and post-intervention assessment scores for students who received support. Outlier points shown individually. Plotly — hover for quartile details."
@@ -76,6 +80,7 @@ export function CS4EducationOutcomes() {
           which influences how to calibrate support resources per program.
         </p>
         <ChartFrame
+          figNum={4}
           title="Engagement Level Distribution — stacked by program"
           question="Is the mix of engagement levels similar across programs, or does one program have a disproportionately disengaged cohort?"
           method="Each student classified as low / medium / high engagement based on session attendance and interaction frequency. Bars are stacked horizontally showing count per program."
@@ -95,6 +100,7 @@ export function CS4EducationOutcomes() {
           components, revealing how programs cluster in the underlying feature space.
         </p>
         <ChartFrame
+          figNum={5}
           title="PCA Scatter — PC1 vs PC2, coloured by program"
           question="Do the three programs separate into distinct clusters in reduced feature space, or do they overlap substantially?"
           method="Features: completion rate (%) and assessment score. Both standardised to unit variance before PCA. PC1 and PC2 are the first two principal components; variance explained shown on each axis."
@@ -114,6 +120,7 @@ export function CS4EducationOutcomes() {
           student population is spread evenly or concentrated at particular performance levels.
         </p>
         <ChartFrame
+          figNum={6}
           title="Student Count Heatmap — Program × Score Band"
           question="Are students concentrated at specific score bands, and does this differ across programs?"
           method="Students binned into 20-point score bands. Cell value = number of students in each (program, band) combination. Colour intensity proportional to count."
@@ -123,6 +130,51 @@ export function CS4EducationOutcomes() {
           <ScoreHeatmap />
         </ChartFrame>
       </section>
+
+      <ChartGlossary rows={[
+        {
+          fig: 1,
+          chartType: 'Scatter Plot with Reference Lines',
+          x: 'completion rate % — continuous (0–100)',
+          y: 'assessment score — continuous (0–100) · colour: at-risk flag (binary)',
+          note: 'Bivariate scatter using two perpendicular reference lines to create four quadrants. The lower-left quadrant defines the at-risk region, making the segmentation rule explicit and auditable without a black-box model.',
+        },
+        {
+          fig: 2,
+          chartType: 'Grouped Bar Chart',
+          x: 'program — nominal (3 groups)',
+          y: 'metric value — continuous · group: metric type (completion % vs score)',
+          note: 'Side-by-side bars comparing two different measures across the same categorical axis. Useful for showing that two variables move together (or don\'t) across groups without requiring a scatter plot.',
+        },
+        {
+          fig: 3,
+          chartType: 'Box Plot',
+          x: 'time point — binary (before/after intervention)',
+          y: 'assessment score — continuous distribution (quartiles + outliers)',
+          note: 'Distribution summary showing median, IQR, whiskers, and outliers. More informative than a mean comparison because it reveals whether a shift is broad-based or driven by a few extreme values.',
+        },
+        {
+          fig: 4,
+          chartType: 'D3 Stacked Horizontal Bar',
+          x: 'student count — discrete',
+          y: 'program — nominal (3 rows) · colour: engagement level (ordinal: low/medium/high)',
+          note: 'Proportional stacked bars showing part-to-whole composition across categories. Drawn in D3 for precise stacking control. Best when the total bar length (group size) and the internal proportions are both meaningful.',
+        },
+        {
+          fig: 5,
+          chartType: 'PCA Scatter (principal component analysis)',
+          x: 'PC1 — continuous linear combination of standardised features',
+          y: 'PC2 — continuous, orthogonal to PC1 · colour: program (nominal)',
+          note: 'Dimensionality-reduced scatter projecting standardised input features onto their two principal axes of variance. Computed client-side using the analytical 2×2 eigenvector solution. Variance explained shown on each axis label.',
+        },
+        {
+          fig: 6,
+          chartType: 'Annotated Heatmap (frequency matrix)',
+          x: 'program — nominal (3 columns)',
+          y: 'score band — ordinal (5 rows of 20 points each) · colour: student count (continuous)',
+          note: 'Frequency matrix showing how students distribute across a continuous variable (score) and a categorical variable (program). Cell annotations display the exact count so the chart is readable without a colour legend.',
+        },
+      ]} />
 
     </div>
   )

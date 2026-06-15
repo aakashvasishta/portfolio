@@ -1,4 +1,5 @@
 import { ChartFrame } from '../../components/charts/ChartFrame'
+import { ChartGlossary } from '../../components/ui/ChartGlossary'
 import { AttritionByDept } from '../../components/charts/cs2/AttritionByDept'
 import { RiskDistribution } from '../../components/charts/cs2/RiskDistribution'
 import { SatisfactionScatter } from '../../components/charts/cs2/SatisfactionScatter'
@@ -19,6 +20,7 @@ export function CS2HRAttrition() {
           Service, Sales) from stable ones, and anchors every subsequent analysis.
         </p>
         <ChartFrame
+          figNum={1}
           title="Attrition Rate by Department — sorted high to low"
           question="Which departments have attrition rates significantly above the company average?"
           method="Attrition rate = employees who left ÷ total headcount per department over the observation period. Vermilion bars exceed the company average; green bars are below it."
@@ -39,6 +41,7 @@ export function CS2HRAttrition() {
           actual attrition.
         </p>
         <ChartFrame
+          figNum={2}
           title="Risk Score Histogram — retained (light) vs. departed (solid)"
           question="Does the risk model score correctly separate employees who left from those who stayed?"
           method="Risk score buckets of 20 points. Each bar = total employees in bucket; darker segment = departed. A well-calibrated model should have high attrition in the 60–100 buckets."
@@ -58,6 +61,7 @@ export function CS2HRAttrition() {
           reveals whether attrition is driven by disengagement, underperformance, or both.
         </p>
         <ChartFrame
+          figNum={3}
           title="Satisfaction × Performance — green stayed, vermilion left"
           question="Are employees who leave concentrated in a particular satisfaction–performance quadrant?"
           method="Each point is one employee. Satisfaction is a 0–10 survey score; performance is manager-rated 1–5. Colour indicates actual attrition outcome."
@@ -77,6 +81,7 @@ export function CS2HRAttrition() {
           early, declining with experience, then rising again near the 5-year mark.
         </p>
         <ChartFrame
+          figNum={4}
           title="Attrition Rate by Tenure Bracket"
           question="Does attrition risk change with seniority, and if so when is the most vulnerable window?"
           method="Employees grouped into 5 tenure brackets. Attrition rate = departed ÷ headcount within each bracket. Bars highlight brackets above 80% of the peak rate."
@@ -96,6 +101,7 @@ export function CS2HRAttrition() {
           attrition risk, enabling surgical budget adjustments.
         </p>
         <ChartFrame
+          figNum={5}
           title="Attrition Rate Heatmap — Department × Comp Band"
           question="Are there specific department and compensation intersections with disproportionately high attrition?"
           method="Cells show attrition rate for each (department, comp band) combination. White/grey cells have too few employees for a reliable rate. Band 1 = lowest, Band 5 = highest pay."
@@ -115,6 +121,7 @@ export function CS2HRAttrition() {
           which variables move together — and which are genuinely independent signals.
         </p>
         <ChartFrame
+          figNum={6}
           title="Pearson Correlation Matrix — HR numeric features"
           question="Are satisfaction, performance, risk score, and comp band correlated, or do they measure distinct dimensions?"
           method="Pearson correlation computed pairwise across all 1,400 employees. Values range from −1 (perfect inverse relationship) to +1 (perfect positive relationship). Diagonal is always 1 by definition."
@@ -124,6 +131,51 @@ export function CS2HRAttrition() {
           <CorrelationMatrix />
         </ChartFrame>
       </section>
+
+      <ChartGlossary rows={[
+        {
+          fig: 1,
+          chartType: 'Horizontal Bar Chart',
+          x: 'attrition rate % — continuous measure',
+          y: 'department — nominal, sorted descending by rate',
+          note: 'Ranked horizontal bars that surface which categories exceed a reference threshold. Colour encodes above/below-average status as a third binary dimension.',
+        },
+        {
+          fig: 2,
+          chartType: 'Stacked Histogram',
+          x: 'risk score bucket — ordinal (5 bands of 20 points each)',
+          y: 'employee count — discrete · colour: attrition outcome (binary, stacked)',
+          note: 'Stacked frequency chart showing two groups within each bin. The relative size of the solid segment at each bin reveals how well a scoring model separates outcome classes.',
+        },
+        {
+          fig: 3,
+          chartType: 'Scatter Plot',
+          x: 'satisfaction score — continuous (0–10)',
+          y: 'performance rating — continuous (1–5) · colour: attrition (binary)',
+          note: 'Bivariate scatter using colour as a third variable to reveal which region of a 2D feature space is most predictive of an outcome. Useful for identifying dominant drivers among correlated variables.',
+        },
+        {
+          fig: 4,
+          chartType: 'Bar Chart',
+          x: 'tenure bracket — ordinal (5 career-stage groups)',
+          y: 'attrition rate % — continuous',
+          note: 'Ordered categorical bars showing how a rate metric varies across a natural sequence. Colour highlights bars above a threshold relative to the peak, not an absolute value.',
+        },
+        {
+          fig: 5,
+          chartType: 'D3 Heatmap (two-dimensional rate matrix)',
+          x: 'compensation band — ordinal (1–5)',
+          y: 'department — nominal (8 rows) · colour: attrition rate (continuous)',
+          note: 'Two-dimensional rate matrix that reveals interaction effects invisible in separate univariate charts. Cells with insufficient data are suppressed to avoid misleading rates from small samples.',
+        },
+        {
+          fig: 6,
+          chartType: 'Correlation Matrix (annotated heatmap)',
+          x: 'HR metric — nominal (axis label)',
+          y: 'HR metric — nominal (axis label) · colour: Pearson r (continuous −1 to +1)',
+          note: 'Symmetric heatmap where each cell encodes the linear relationship between a variable pair. A diverging colorscale centred at zero makes positive and negative correlations equally readable at a glance.',
+        },
+      ]} />
 
     </div>
   )

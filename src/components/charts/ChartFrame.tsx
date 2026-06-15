@@ -5,6 +5,7 @@ interface ChartFrameProps {
   question: string
   method?: string
   takeaway: string
+  figNum?: number
   /** Show the "dataset regenerated to match original scale" disclaimer */
   showDataNote?: boolean
   caption?: string
@@ -21,6 +22,7 @@ export function ChartFrame({
   question,
   method,
   takeaway,
+  figNum,
   showDataNote = false,
   caption,
   height = 320,
@@ -30,7 +32,12 @@ export function ChartFrame({
     <figure className="my-8">
       {/* Chart title */}
       <figcaption className="mb-3">
-        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">
+        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1 flex items-baseline gap-2">
+          {figNum !== undefined && (
+            <span className="font-mono text-xs text-indigo-500 dark:text-indigo-400 flex-shrink-0">
+              Fig.{figNum}
+            </span>
+          )}
           {title}
         </h3>
         {/* Question */}
