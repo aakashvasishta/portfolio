@@ -4,6 +4,7 @@ import { RiskDistribution } from '../../components/charts/cs2/RiskDistribution'
 import { SatisfactionScatter } from '../../components/charts/cs2/SatisfactionScatter'
 import { TenureAttrition } from '../../components/charts/cs2/TenureAttrition'
 import { DeptCompHeatmap } from '../../components/charts/cs2/DeptCompHeatmap'
+import { CorrelationMatrix } from '../../components/charts/cs2/CorrelationMatrix'
 
 export function CS2HRAttrition() {
   return (
@@ -102,6 +103,25 @@ export function CS2HRAttrition() {
           height={320}
         >
           <DeptCompHeatmap />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          Feature Correlation Matrix
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          A pairwise Pearson correlation matrix across the four key numeric HR metrics reveals
+          which variables move together — and which are genuinely independent signals.
+        </p>
+        <ChartFrame
+          title="Pearson Correlation Matrix — HR numeric features"
+          question="Are satisfaction, performance, risk score, and comp band correlated, or do they measure distinct dimensions?"
+          method="Pearson correlation computed pairwise across all 1,400 employees. Values range from −1 (perfect inverse relationship) to +1 (perfect positive relationship). Diagonal is always 1 by definition."
+          takeaway="Risk score is strongly negatively correlated with satisfaction — as expected, since satisfaction is a primary input to the risk model. Performance and comp band are weakly positive, confirming that higher performers tend to sit in higher pay bands. Satisfaction and performance are nearly uncorrelated, meaning dissatisfied employees are not necessarily underperformers."
+          height={340}
+        >
+          <CorrelationMatrix />
         </ChartFrame>
       </section>
 

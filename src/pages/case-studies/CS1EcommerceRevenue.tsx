@@ -4,6 +4,7 @@ import { CohortHeatmap } from '../../components/charts/cs1/CohortHeatmap'
 import { RevenueTimeline } from '../../components/charts/cs1/RevenueTimeline'
 import { SegmentProfile } from '../../components/charts/cs1/SegmentProfile'
 import { CategoryTreemap } from '../../components/charts/cs1/CategoryTreemap'
+import { VolcanoPlot } from '../../components/charts/cs1/VolcanoPlot'
 
 export function CS1EcommerceRevenue() {
   return (
@@ -101,6 +102,26 @@ export function CS1EcommerceRevenue() {
           height={320}
         >
           <CategoryTreemap />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          Channel A/B Test Significance
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          Running 80 marketing experiments across five channels produces a distribution of
+          effect sizes and p-values. A volcano plot separates the few truly effective variants
+          from the noise in a single view.
+        </p>
+        <ChartFrame
+          title="Marketing Experiment Volcano Plot — effect size vs statistical significance"
+          question="Which channel experiments produced reliably higher conversion, and which variants should be killed?"
+          method="Each point is one A/B test variant. X axis = log₂(conversion rate / baseline). Y axis = −log₁₀(p-value). Dashed lines mark significance threshold (p < 0.05) and minimum effect size (log₂FC > 0.5). Colour = marketing channel."
+          takeaway="Search and Social variants cluster in the top-right (high lift, high confidence), making them the priority budget recipients. Several Display and Email variants fall below the significance line despite appearing to lift conversions — these should be paused rather than scaled."
+          height={320}
+        >
+          <VolcanoPlot />
         </ChartFrame>
       </section>
 

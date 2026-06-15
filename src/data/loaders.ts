@@ -6,7 +6,7 @@
  */
 import { useState, useEffect } from 'react'
 import type {
-  CS1Customer, CS1ParetoRow, CS1CohortRow, CS1TimelinePoint, CS1CategoryNode,
+  CS1Customer, CS1ParetoRow, CS1CohortRow, CS1TimelinePoint, CS1CategoryNode, CS1VolcanoPoint,
   CS2Employee,
   CS3FunnelStage, CS3Sankey, CS3Kpis, CS3CohortRow, CS3Intervention,
   CS4Student,
@@ -31,6 +31,7 @@ export const useCS1Pareto       = () => useJson<CS1ParetoRow[]>('/data/cs1-paret
 export const useCS1Cohorts      = () => useJson<CS1CohortRow[]>('/data/cs1-cohort-retention.json')
 export const useCS1Timeline     = () => useJson<CS1TimelinePoint[]>('/data/cs1-revenue-timeline.json')
 export const useCS1Categories   = () => useJson<CS1CategoryNode>('/data/cs1-revenue-categories.json')
+export const useCS1Volcano      = () => useJson<CS1VolcanoPoint[]>('/data/cs1-volcano.json')
 
 // ── CS2 ───────────────────────────────────────────────────────────────────────
 export const useCS2Employees    = () => useJson<CS2Employee[]>('/data/cs2-employees.json')

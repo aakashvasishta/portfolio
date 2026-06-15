@@ -1,5 +1,12 @@
 // ── CS1 — E-Commerce Revenue & Segmentation ──────────────────────────────────
 
+export interface CS1VolcanoPoint {
+  id: string
+  channel: string
+  log2fc: number
+  neg_log10_p: number
+}
+
 export interface CS1Customer {
   id: string
   decile: number

@@ -3,6 +3,8 @@ import { RiskScatter } from '../../components/charts/cs4/RiskScatter'
 import { ProgramComparison } from '../../components/charts/cs4/ProgramComparison'
 import { InterventionOutcome } from '../../components/charts/cs4/InterventionOutcome'
 import { EngagementBars } from '../../components/charts/cs4/EngagementBars'
+import { PCAScatter } from '../../components/charts/cs4/PCAScatter'
+import { ScoreHeatmap } from '../../components/charts/cs4/ScoreHeatmap'
 
 export function CS4EducationOutcomes() {
   return (
@@ -81,6 +83,44 @@ export function CS4EducationOutcomes() {
           height={252}
         >
           <EngagementBars />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          PCA — Student Feature Space
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          Principal Component Analysis reduces completion rate and assessment score to orthogonal
+          components, revealing how programs cluster in the underlying feature space.
+        </p>
+        <ChartFrame
+          title="PCA Scatter — PC1 vs PC2, coloured by program"
+          question="Do the three programs separate into distinct clusters in reduced feature space, or do they overlap substantially?"
+          method="Features: completion rate (%) and assessment score. Both standardised to unit variance before PCA. PC1 and PC2 are the first two principal components; variance explained shown on each axis."
+          takeaway="The three programs overlap considerably in PCA space, confirming that program membership is not a strong predictor of performance. The primary axis of variation (PC1) aligns with overall performance — a single continuous dimension separates high- from low-performing students across all programs, supporting a universal early-warning system."
+          height={320}
+        >
+          <PCAScatter />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          Score Distribution Heatmap
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          A frequency heatmap of assessment score bands by program shows whether each program's
+          student population is spread evenly or concentrated at particular performance levels.
+        </p>
+        <ChartFrame
+          title="Student Count Heatmap — Program × Score Band"
+          question="Are students concentrated at specific score bands, and does this differ across programs?"
+          method="Students binned into 20-point score bands. Cell value = number of students in each (program, band) combination. Colour intensity proportional to count."
+          takeaway="The 60–80 band is the modal range across all three programs, with relatively few students at either extreme. The broadly similar distributions confirm that no program is systematically producing very high or very low scorers — supporting the finding that the at-risk problem is individual rather than program-level."
+          height={320}
+        >
+          <ScoreHeatmap />
         </ChartFrame>
       </section>
 
