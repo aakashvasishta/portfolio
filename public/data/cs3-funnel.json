@@ -1,0 +1,58 @@
+[
+  {
+    "stage": "Registration",
+    "users": 10000,
+    "drop_off": 0,
+    "conversion_rate": 1,
+    "overall_rate": 1
+  },
+  {
+    "stage": "Onboarding Complete",
+    "users": 7200,
+    "drop_off": 2800,
+    "conversion_rate": 0.72,
+    "overall_rate": 0.72
+  },
+  {
+    "stage": "First Lesson",
+    "users": 5500,
+    "drop_off": 1700,
+    "conversion_rate": 0.764,
+    "overall_rate": 0.55
+  },
+  {
+    "stage": "Week 2 Active",
+    "users": 3800,
+    "drop_off": 1700,
+    "conversion_rate": 0.691,
+    "overall_rate": 0.38
+  },
+  {
+    "stage": "Module 1 Complete",
+    "users": 2600,
+    "drop_off": 1200,
+    "conversion_rate": 0.684,
+    "overall_rate": 0.26
+  },
+  {
+    "stage": "Module 2 Complete",
+    "users": 1800,
+    "drop_off": 800,
+    "conversion_rate": 0.692,
+    "overall_rate": 0.18
+  },
+  {
+    "stage": "Assessment Passed",
+    "users": 1200,
+    "drop_off": 600,
+    "conversion_rate": 0.667,
+    "overall_rate": 0.12
+  },
+  {
+    "stage": "Certified",
+    "users": 900,
+    "drop_off": 300,
+    "conversion_rate": 0.75,
+    "overall_rate": 0.09
+  }
+]

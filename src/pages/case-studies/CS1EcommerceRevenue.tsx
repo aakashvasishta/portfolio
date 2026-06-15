@@ -1,0 +1,109 @@
+import { ChartFrame } from '../../components/charts/ChartFrame'
+import { ParetoChart } from '../../components/charts/cs1/ParetoChart'
+import { CohortHeatmap } from '../../components/charts/cs1/CohortHeatmap'
+import { RevenueTimeline } from '../../components/charts/cs1/RevenueTimeline'
+import { SegmentProfile } from '../../components/charts/cs1/SegmentProfile'
+import { CategoryTreemap } from '../../components/charts/cs1/CategoryTreemap'
+
+export function CS1EcommerceRevenue() {
+  return (
+    <div className="space-y-14 mt-6">
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          Revenue Concentration
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          Ranking 2,000 customers by total spend and grouping them into deciles reveals an extreme
+          Pareto effect — the top decile alone accounts for over three-quarters of all revenue.
+        </p>
+        <ChartFrame
+          title="Customer Revenue Pareto — bars show decile share, line shows cumulative"
+          question="How concentrated is revenue across the customer base?"
+          method="Customers ranked by 2-year total spend and split into equal-sized deciles (200 each). Bars = revenue share per decile; line = running cumulative."
+          takeaway="D1 (top 10%) holds 77% of revenue. Add D2 and you reach 84% — the entire bottom 80% of customers contributes just 16%. Retention strategy should be almost entirely focused on the top decile."
+          height={320}
+        >
+          <ParetoChart />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          Cohort Retention
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          Tracking 10 monthly cohorts over 12 months shows when customers stop returning —
+          a critical signal for lifecycle email and re-engagement campaign timing.
+        </p>
+        <ChartFrame
+          title="Monthly Cohort Retention Heatmap — % of cohort still active"
+          question="At which month do cohorts lose the most customers, and does this vary by cohort?"
+          method="Each row is a customer cohort (acquisition month). Values show what % of the original cohort made a purchase in that subsequent month. M0 = 100% by definition."
+          takeaway="The steepest drop occurs between M0 and M1 (roughly 35–40% of customers churn immediately). Cohorts that clear M2 stabilise at around 25–30%, suggesting a 60-day window is the key re-engagement target."
+          height={320}
+        >
+          <CohortHeatmap />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          Revenue Timeline
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          Two years of weekly revenue shows a consistent Q4 seasonal spike, making
+          inventory and campaign planning highly predictable.
+        </p>
+        <ChartFrame
+          title="Weekly Revenue — 2022–2023"
+          question="What is the underlying growth trend and how pronounced is Q4 seasonality?"
+          method="104 weekly aggregates from transaction logs. Trend estimated visually; Q4 windows are October–December for both years."
+          takeaway="Baseline revenue grew ~40% year-over-year. Q4 spikes reach 1.5–2× the off-peak baseline, confirming that capacity planning (inventory, support, fulfilment) should scale up from early October each year."
+          height={320}
+        >
+          <RevenueTimeline />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          RFM Segment Profile
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          RFM scoring (Recency, Frequency, Monetary) partitions the customer base into seven
+          actionable segments. Bar length shows % of customers; right label shows % of revenue.
+        </p>
+        <ChartFrame
+          title="Segment Size vs Revenue Contribution"
+          question="Which segments are over- or under-represented in revenue relative to their customer share?"
+          method="Customers scored on R/F/M (1–5 each). Composite score maps to seven named segments. Bars = % customers; right labels = % revenue contributed."
+          takeaway="Green segments (Champions, Loyal, Potential Loyalist, Promising) make up ~46% of customers but contribute the vast majority of revenue. The 'Promising' segment — the largest at 44% — represents the biggest growth lever: small increases in purchase frequency here move the top line significantly."
+          height={320}
+        >
+          <SegmentProfile />
+        </ChartFrame>
+      </section>
+
+      <section>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1">
+          Revenue by Category
+        </h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+          A two-level treemap breaks down revenue by the 8 top-level categories and their
+          subcategories, revealing where category investments pay off most.
+        </p>
+        <ChartFrame
+          title="Category Revenue Treemap — area proportional to revenue"
+          question="Which categories and subcategories drive the most revenue?"
+          method="Total 2-year revenue attributed to each category and subcategory from transaction records. Area is proportional to revenue."
+          takeaway="Category concentration mirrors customer concentration — a handful of categories dominate. Hover to explore subcategory contributions. This informs assortment and promotional budget allocation."
+          height={320}
+        >
+          <CategoryTreemap />
+        </ChartFrame>
+      </section>
+
+    </div>
+  )
+}

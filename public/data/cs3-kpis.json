@@ -1,0 +1,74 @@
+{
+  "north_star": {
+    "name": "Weekly Active Learners",
+    "value": 3240,
+    "target": 5000,
+    "unit": "",
+    "trend": [
+      2820,
+      2890,
+      3010,
+      3100,
+      3180,
+      3240
+    ]
+  },
+  "supporting": [
+    {
+      "name": "Completion Rate",
+      "value": 0.31,
+      "target": 0.5,
+      "unit": "%",
+      "trend": [
+        0.24,
+        0.26,
+        0.27,
+        0.28,
+        0.3,
+        0.31
+      ]
+    },
+    {
+      "name": "Avg Session (min)",
+      "value": 18.5,
+      "target": 25,
+      "unit": "min",
+      "trend": [
+        16.2,
+        17,
+        17.4,
+        17.8,
+        18.2,
+        18.5
+      ]
+    },
+    {
+      "name": "NPS",
+      "value": 42,
+      "target": 60,
+      "unit": "",
+      "trend": [
+        35,
+        37,
+        38,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "name": "Wk-2 Retention",
+      "value": 0.69,
+      "target": 0.8,
+      "unit": "%",
+      "trend": [
+        0.61,
+        0.63,
+        0.65,
+        0.66,
+        0.68,
+        0.69
+      ]
+    }
+  ]
+}

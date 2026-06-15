@@ -1,0 +1,93 @@
+{
+  "nodes": [
+    {
+      "id": "Organic Search",
+      "group": "source"
+    },
+    {
+      "id": "Paid Ads",
+      "group": "source"
+    },
+    {
+      "id": "Referral",
+      "group": "source"
+    },
+    {
+      "id": "Active Learners",
+      "group": "journey"
+    },
+    {
+      "id": "Passive Viewers",
+      "group": "journey"
+    },
+    {
+      "id": "Certified",
+      "group": "outcome"
+    },
+    {
+      "id": "Ongoing",
+      "group": "outcome"
+    },
+    {
+      "id": "Dropped Out",
+      "group": "outcome"
+    }
+  ],
+  "links": [
+    {
+      "source": "Organic Search",
+      "target": "Active Learners",
+      "value": 3800
+    },
+    {
+      "source": "Organic Search",
+      "target": "Passive Viewers",
+      "value": 1100
+    },
+    {
+      "source": "Paid Ads",
+      "target": "Active Learners",
+      "value": 2900
+    },
+    {
+      "source": "Paid Ads",
+      "target": "Passive Viewers",
+      "value": 800
+    },
+    {
+      "source": "Referral",
+      "target": "Active Learners",
+      "value": 800
+    },
+    {
+      "source": "Referral",
+      "target": "Passive Viewers",
+      "value": 600
+    },
+    {
+      "source": "Active Learners",
+      "target": "Certified",
+      "value": 900
+    },
+    {
+      "source": "Active Learners",
+      "target": "Ongoing",
+      "value": 1300
+    },
+    {
+      "source": "Active Learners",
+      "target": "Dropped Out",
+      "value": 5300
+    },
+    {
+      "source": "Passive Viewers",
+      "target": "Ongoing",
+      "value": 420
+    },
+    {
+      "source": "Passive Viewers",
+      "target": "Dropped Out",
+      "value": 2080
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "name": "All Revenue",
+  "children": [
+    {
+      "name": "Electronics",
+      "revenue": 896000,
+      "children": [
+        {
+          "name": "Smartphones",
+          "revenue": 143476
+        },
+        {
+          "name": "Laptops",
+          "revenue": 255241
+        },
+        {
+          "name": "Audio",
+          "revenue": 285636
+        },
+        {
+          "name": "Accessories",
+          "revenue": 211646
+        }
+      ]
+    },
+    {
+      "name": "Clothing",
+      "revenue": 704000,
+      "children": [
+        {
+          "name": "Women's",
+          "revenue": 132159
+        },
+        {
+          "name": "Men's",
+          "revenue": 196322
+        },
+        {
+          "name": "Kids'",
+          "revenue": 119188
+        },
+        {
+          "name": "Footwear",
+          "revenue": 256331
+        }
+      ]
+    },
+    {
+      "name": "Home & Garden",
+      "revenue": 512000,
+      "children": [
+        {
+          "name": "Furniture",
+          "revenue": 78187
+        },
+        {
+          "name": "Decor",
+          "revenue": 157849
+        },
+        {
+          "name": "Kitchen",
+          "revenue": 133426
+        },
+        {
+          "name": "Garden",
+          "revenue": 142538
+        }
+      ]
+    },
+    {
+      "name": "Sports",
+      "revenue": 384000,
+      "children": [
+        {
+          "name": "Equipment",
+          "revenue": 98377
+        },
+        {
+          "name": "Apparel",
+          "revenue": 77353
+        },
+        {
+          "name": "Footwear",
+          "revenue": 86763
+        },
+        {
+          "name": "Nutrition",
+          "revenue": 121507
+        }
+      ]
+    },
+    {
+      "name": "Beauty",
+      "revenue": 320000,
+      "children": [
+        {
+          "name": "Skincare",
+          "revenue": 92737
+        },
+        {
+          "name": "Haircare",
+          "revenue": 91932
+        },
+        {
+          "name": "Makeup",
+          "revenue": 84839
+        },
+        {
+          "name": "Fragrance",
+          "revenue": 50492
+        }
+      ]
+    },
+    {
+      "name": "Books & Media",
+      "revenue": 224000,
+      "children": [
+        {
+          "name": "Books",
+          "revenue": 66644
+        },
+        {
+          "name": "Music",
+          "revenue": 59106
+        },
+        {
+          "name": "Movies",
+          "revenue": 57876
+        },
+        {
+          "name": "Games",
+          "revenue": 40374
+        }
+      ]
+    },
+    {
+      "name": "Toys",
+      "revenue": 96000,
+      "children": [
+        {
+          "name": "Educational",
+          "revenue": 21784
+        },
+        {
+          "name": "Action Figures",
+          "revenue": 27478
+        },
+        {
+          "name": "Outdoor",
+          "revenue": 28216
+        },
+        {
+          "name": "Games",
+          "revenue": 18522
+        }
+      ]
+    },
+    {
+      "name": "Food & Gourmet",
+      "revenue": 64000,
+      "children": [
+        {
+          "name": "Snacks",
+          "revenue": 7958
+        },
+        {
+          "name": "Beverages",
+          "revenue": 17508
+        },
+        {
+          "name": "Organic",
+          "revenue": 20293
+        },
+        {
+          "name": "International",
+          "revenue": 18241
+        }
+      ]
+    }
+  ]
+}

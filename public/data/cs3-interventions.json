@@ -1,0 +1,26 @@
+[
+  {
+    "intervention": "Smarter Onboarding",
+    "metric": "Onboarding Rate",
+    "before": 0.72,
+    "after": 0.84,
+    "delta_users": 1200,
+    "stage": "Onboarding Complete"
+  },
+  {
+    "intervention": "Week 2 Nudge Campaign",
+    "metric": "Wk-2 Retention",
+    "before": 0.69,
+    "after": 0.8,
+    "delta_users": 840,
+    "stage": "Week 2 Active"
+  },
+  {
+    "intervention": "Assessment Redesign",
+    "metric": "Pass Rate",
+    "before": 0.67,
+    "after": 0.81,
+    "delta_users": 780,
+    "stage": "Assessment Passed"
+  }
+]

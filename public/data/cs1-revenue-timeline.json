@@ -1,0 +1,626 @@
+[
+  {
+    "date": "2022-01-03",
+    "week": 1,
+    "revenue": 22820,
+    "orders": 343
+  },
+  {
+    "date": "2022-01-10",
+    "week": 2,
+    "revenue": 27803,
+    "orders": 484
+  },
+  {
+    "date": "2022-01-17",
+    "week": 3,
+    "revenue": 27358,
+    "orders": 424
+  },
+  {
+    "date": "2022-01-24",
+    "week": 4,
+    "revenue": 28452,
+    "orders": 464
+  },
+  {
+    "date": "2022-01-31",
+    "week": 5,
+    "revenue": 23833,
+    "orders": 362
+  },
+  {
+    "date": "2022-02-07",
+    "week": 6,
+    "revenue": 25870,
+    "orders": 399
+  },
+  {
+    "date": "2022-02-14",
+    "week": 7,
+    "revenue": 28886,
+    "orders": 513
+  },
+  {
+    "date": "2022-02-21",
+    "week": 8,
+    "revenue": 27658,
+    "orders": 411
+  },
+  {
+    "date": "2022-02-28",
+    "week": 9,
+    "revenue": 28748,
+    "orders": 458
+  },
+  {
+    "date": "2022-03-07",
+    "week": 10,
+    "revenue": 32589,
+    "orders": 514
+  },
+  {
+    "date": "2022-03-13",
+    "week": 11,
+    "revenue": 30218,
+    "orders": 496
+  },
+  {
+    "date": "2022-03-20",
+    "week": 12,
+    "revenue": 32523,
+    "orders": 529
+  },
+  {
+    "date": "2022-03-27",
+    "week": 13,
+    "revenue": 34427,
+    "orders": 548
+  },
+  {
+    "date": "2022-04-03",
+    "week": 14,
+    "revenue": 32759,
+    "orders": 523
+  },
+  {
+    "date": "2022-04-10",
+    "week": 15,
+    "revenue": 30432,
+    "orders": 546
+  },
+  {
+    "date": "2022-04-17",
+    "week": 16,
+    "revenue": 28230,
+    "orders": 511
+  },
+  {
+    "date": "2022-04-24",
+    "week": 17,
+    "revenue": 29183,
+    "orders": 434
+  },
+  {
+    "date": "2022-05-01",
+    "week": 18,
+    "revenue": 31204,
+    "orders": 505
+  },
+  {
+    "date": "2022-05-08",
+    "week": 19,
+    "revenue": 32603,
+    "orders": 516
+  },
+  {
+    "date": "2022-05-15",
+    "week": 20,
+    "revenue": 28966,
+    "orders": 520
+  },
+  {
+    "date": "2022-05-22",
+    "week": 21,
+    "revenue": 34519,
+    "orders": 618
+  },
+  {
+    "date": "2022-05-29",
+    "week": 22,
+    "revenue": 30493,
+    "orders": 463
+  },
+  {
+    "date": "2022-06-05",
+    "week": 23,
+    "revenue": 28814,
+    "orders": 414
+  },
+  {
+    "date": "2022-06-12",
+    "week": 24,
+    "revenue": 29824,
+    "orders": 448
+  },
+  {
+    "date": "2022-06-19",
+    "week": 25,
+    "revenue": 31069,
+    "orders": 514
+  },
+  {
+    "date": "2022-06-26",
+    "week": 26,
+    "revenue": 32909,
+    "orders": 503
+  },
+  {
+    "date": "2022-07-03",
+    "week": 27,
+    "revenue": 32823,
+    "orders": 514
+  },
+  {
+    "date": "2022-07-10",
+    "week": 28,
+    "revenue": 32216,
+    "orders": 534
+  },
+  {
+    "date": "2022-07-17",
+    "week": 29,
+    "revenue": 28775,
+    "orders": 423
+  },
+  {
+    "date": "2022-07-24",
+    "week": 30,
+    "revenue": 33527,
+    "orders": 582
+  },
+  {
+    "date": "2022-07-31",
+    "week": 31,
+    "revenue": 33176,
+    "orders": 582
+  },
+  {
+    "date": "2022-08-07",
+    "week": 32,
+    "revenue": 33010,
+    "orders": 561
+  },
+  {
+    "date": "2022-08-14",
+    "week": 33,
+    "revenue": 34885,
+    "orders": 561
+  },
+  {
+    "date": "2022-08-21",
+    "week": 34,
+    "revenue": 28524,
+    "orders": 455
+  },
+  {
+    "date": "2022-08-28",
+    "week": 35,
+    "revenue": 30180,
+    "orders": 442
+  },
+  {
+    "date": "2022-09-04",
+    "week": 36,
+    "revenue": 29547,
+    "orders": 469
+  },
+  {
+    "date": "2022-09-11",
+    "week": 37,
+    "revenue": 34747,
+    "orders": 510
+  },
+  {
+    "date": "2022-09-18",
+    "week": 38,
+    "revenue": 29896,
+    "orders": 508
+  },
+  {
+    "date": "2022-09-25",
+    "week": 39,
+    "revenue": 35446,
+    "orders": 525
+  },
+  {
+    "date": "2022-10-02",
+    "week": 40,
+    "revenue": 48237,
+    "orders": 783
+  },
+  {
+    "date": "2022-10-09",
+    "week": 41,
+    "revenue": 46428,
+    "orders": 731
+  },
+  {
+    "date": "2022-10-16",
+    "week": 42,
+    "revenue": 41006,
+    "orders": 699
+  },
+  {
+    "date": "2022-10-23",
+    "week": 43,
+    "revenue": 50046,
+    "orders": 849
+  },
+  {
+    "date": "2022-10-30",
+    "week": 44,
+    "revenue": 46522,
+    "orders": 839
+  },
+  {
+    "date": "2022-11-07",
+    "week": 45,
+    "revenue": 46431,
+    "orders": 700
+  },
+  {
+    "date": "2022-11-14",
+    "week": 46,
+    "revenue": 44189,
+    "orders": 722
+  },
+  {
+    "date": "2022-11-21",
+    "week": 47,
+    "revenue": 49450,
+    "orders": 836
+  },
+  {
+    "date": "2022-11-28",
+    "week": 48,
+    "revenue": 47685,
+    "orders": 762
+  },
+  {
+    "date": "2022-12-05",
+    "week": 49,
+    "revenue": 46084,
+    "orders": 742
+  },
+  {
+    "date": "2022-12-12",
+    "week": 50,
+    "revenue": 42212,
+    "orders": 642
+  },
+  {
+    "date": "2022-12-19",
+    "week": 51,
+    "revenue": 42169,
+    "orders": 634
+  },
+  {
+    "date": "2022-12-26",
+    "week": 52,
+    "revenue": 41700,
+    "orders": 670
+  },
+  {
+    "date": "2023-01-02",
+    "week": 53,
+    "revenue": 28743,
+    "orders": 513
+  },
+  {
+    "date": "2023-01-09",
+    "week": 54,
+    "revenue": 27102,
+    "orders": 457
+  },
+  {
+    "date": "2023-01-16",
+    "week": 55,
+    "revenue": 26973,
+    "orders": 442
+  },
+  {
+    "date": "2023-01-23",
+    "week": 56,
+    "revenue": 28071,
+    "orders": 442
+  },
+  {
+    "date": "2023-01-30",
+    "week": 57,
+    "revenue": 30050,
+    "orders": 494
+  },
+  {
+    "date": "2023-02-06",
+    "week": 58,
+    "revenue": 29396,
+    "orders": 472
+  },
+  {
+    "date": "2023-02-13",
+    "week": 59,
+    "revenue": 25694,
+    "orders": 445
+  },
+  {
+    "date": "2023-02-20",
+    "week": 60,
+    "revenue": 25316,
+    "orders": 400
+  },
+  {
+    "date": "2023-02-27",
+    "week": 61,
+    "revenue": 35863,
+    "orders": 592
+  },
+  {
+    "date": "2023-03-06",
+    "week": 62,
+    "revenue": 32170,
+    "orders": 498
+  },
+  {
+    "date": "2023-03-12",
+    "week": 63,
+    "revenue": 34384,
+    "orders": 503
+  },
+  {
+    "date": "2023-03-19",
+    "week": 64,
+    "revenue": 33217,
+    "orders": 534
+  },
+  {
+    "date": "2023-03-26",
+    "week": 65,
+    "revenue": 33909,
+    "orders": 499
+  },
+  {
+    "date": "2023-04-02",
+    "week": 66,
+    "revenue": 35568,
+    "orders": 609
+  },
+  {
+    "date": "2023-04-09",
+    "week": 67,
+    "revenue": 30343,
+    "orders": 515
+  },
+  {
+    "date": "2023-04-16",
+    "week": 68,
+    "revenue": 36776,
+    "orders": 574
+  },
+  {
+    "date": "2023-04-23",
+    "week": 69,
+    "revenue": 38085,
+    "orders": 651
+  },
+  {
+    "date": "2023-04-30",
+    "week": 70,
+    "revenue": 30112,
+    "orders": 508
+  },
+  {
+    "date": "2023-05-07",
+    "week": 71,
+    "revenue": 38099,
+    "orders": 676
+  },
+  {
+    "date": "2023-05-14",
+    "week": 72,
+    "revenue": 31253,
+    "orders": 533
+  },
+  {
+    "date": "2023-05-21",
+    "week": 73,
+    "revenue": 33848,
+    "orders": 601
+  },
+  {
+    "date": "2023-05-28",
+    "week": 74,
+    "revenue": 34110,
+    "orders": 495
+  },
+  {
+    "date": "2023-06-04",
+    "week": 75,
+    "revenue": 37003,
+    "orders": 558
+  },
+  {
+    "date": "2023-06-11",
+    "week": 76,
+    "revenue": 36843,
+    "orders": 608
+  },
+  {
+    "date": "2023-06-18",
+    "week": 77,
+    "revenue": 37544,
+    "orders": 596
+  },
+  {
+    "date": "2023-06-25",
+    "week": 78,
+    "revenue": 37449,
+    "orders": 576
+  },
+  {
+    "date": "2023-07-02",
+    "week": 79,
+    "revenue": 31484,
+    "orders": 560
+  },
+  {
+    "date": "2023-07-09",
+    "week": 80,
+    "revenue": 33481,
+    "orders": 492
+  },
+  {
+    "date": "2023-07-16",
+    "week": 81,
+    "revenue": 37914,
+    "orders": 596
+  },
+  {
+    "date": "2023-07-23",
+    "week": 82,
+    "revenue": 35476,
+    "orders": 620
+  },
+  {
+    "date": "2023-07-30",
+    "week": 83,
+    "revenue": 30845,
+    "orders": 516
+  },
+  {
+    "date": "2023-08-06",
+    "week": 84,
+    "revenue": 30880,
+    "orders": 534
+  },
+  {
+    "date": "2023-08-13",
+    "week": 85,
+    "revenue": 31186,
+    "orders": 553
+  },
+  {
+    "date": "2023-08-20",
+    "week": 86,
+    "revenue": 32400,
+    "orders": 565
+  },
+  {
+    "date": "2023-08-27",
+    "week": 87,
+    "revenue": 36923,
+    "orders": 629
+  },
+  {
+    "date": "2023-09-03",
+    "week": 88,
+    "revenue": 38344,
+    "orders": 669
+  },
+  {
+    "date": "2023-09-10",
+    "week": 89,
+    "revenue": 34470,
+    "orders": 608
+  },
+  {
+    "date": "2023-09-17",
+    "week": 90,
+    "revenue": 34079,
+    "orders": 551
+  },
+  {
+    "date": "2023-09-24",
+    "week": 91,
+    "revenue": 35975,
+    "orders": 574
+  },
+  {
+    "date": "2023-10-01",
+    "week": 92,
+    "revenue": 46215,
+    "orders": 684
+  },
+  {
+    "date": "2023-10-08",
+    "week": 93,
+    "revenue": 48410,
+    "orders": 869
+  },
+  {
+    "date": "2023-10-15",
+    "week": 94,
+    "revenue": 45392,
+    "orders": 791
+  },
+  {
+    "date": "2023-10-22",
+    "week": 95,
+    "revenue": 54420,
+    "orders": 813
+  },
+  {
+    "date": "2023-10-29",
+    "week": 96,
+    "revenue": 45858,
+    "orders": 676
+  },
+  {
+    "date": "2023-11-06",
+    "week": 97,
+    "revenue": 44669,
+    "orders": 697
+  },
+  {
+    "date": "2023-11-13",
+    "week": 98,
+    "revenue": 49527,
+    "orders": 790
+  },
+  {
+    "date": "2023-11-20",
+    "week": 99,
+    "revenue": 44883,
+    "orders": 675
+  },
+  {
+    "date": "2023-11-27",
+    "week": 100,
+    "revenue": 50542,
+    "orders": 851
+  },
+  {
+    "date": "2023-12-04",
+    "week": 101,
+    "revenue": 48543,
+    "orders": 709
+  },
+  {
+    "date": "2023-12-11",
+    "week": 102,
+    "revenue": 51739,
+    "orders": 898
+  },
+  {
+    "date": "2023-12-18",
+    "week": 103,
+    "revenue": 47956,
+    "orders": 822
+  },
+  {
+    "date": "2023-12-25",
+    "week": 104,
+    "revenue": 51703,
+    "orders": 840
+  }
+]

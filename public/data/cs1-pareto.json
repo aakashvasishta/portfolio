@@ -1,0 +1,82 @@
+[
+  {
+    "decile": 1,
+    "label": "D1",
+    "customers": 200,
+    "revenue": 2448856,
+    "revenue_share": 76.53,
+    "cumulative": 76.53
+  },
+  {
+    "decile": 2,
+    "label": "D2",
+    "customers": 200,
+    "revenue": 238001,
+    "revenue_share": 7.44,
+    "cumulative": 83.97
+  },
+  {
+    "decile": 3,
+    "label": "D3",
+    "customers": 200,
+    "revenue": 133985,
+    "revenue_share": 4.19,
+    "cumulative": 88.16
+  },
+  {
+    "decile": 4,
+    "label": "D4",
+    "customers": 200,
+    "revenue": 93187,
+    "revenue_share": 2.91,
+    "cumulative": 91.07
+  },
+  {
+    "decile": 5,
+    "label": "D5",
+    "customers": 200,
+    "revenue": 71193,
+    "revenue_share": 2.22,
+    "cumulative": 93.29
+  },
+  {
+    "decile": 6,
+    "label": "D6",
+    "customers": 200,
+    "revenue": 58083,
+    "revenue_share": 1.82,
+    "cumulative": 95.11
+  },
+  {
+    "decile": 7,
+    "label": "D7",
+    "customers": 200,
+    "revenue": 49024,
+    "revenue_share": 1.53,
+    "cumulative": 96.64
+  },
+  {
+    "decile": 8,
+    "label": "D8",
+    "customers": 200,
+    "revenue": 42231,
+    "revenue_share": 1.32,
+    "cumulative": 97.96
+  },
+  {
+    "decile": 9,
+    "label": "D9",
+    "customers": 200,
+    "revenue": 36457,
+    "revenue_share": 1.14,
+    "cumulative": 99.1
+  },
+  {
+    "decile": 10,
+    "label": "D10",
+    "customers": 200,
+    "revenue": 28983,
+    "revenue_share": 0.91,
+    "cumulative": 100.01
+  }
+]
