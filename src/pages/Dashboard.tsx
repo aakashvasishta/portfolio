@@ -123,7 +123,7 @@ export function Dashboard() {
 
           {/* Row 1: Attrition by Dept (wider) + Risk Histogram */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
-            <DashCard title="Attrition rate by department — click to filter" className="lg:col-span-3 h-72">
+            <DashCard title="Attrition rate by department (click to filter)" className="lg:col-span-3 h-72">
               {allData && filteredData ? (
                 <DashAttritionBar
                   allData={allData}

@@ -57,7 +57,7 @@ export function Resume() {
           Data analyst specialising in translating complex datasets into clear, actionable decisions
           for non-technical stakeholders. Work spans e-commerce revenue analytics, HR attrition
           modelling, product funnel teardowns, and education program evaluation. Builds dashboards
-          and KPI frameworks that embed insight into business workflows — not just reports.
+          and KPI frameworks that embed insight into business workflows, not just reports.
           Full-stack data storytelling using SQL, Python, and code-driven visualisation (D3,
           Recharts, Plotly).
         </p>
@@ -171,7 +171,7 @@ export function Resume() {
                 <span className="font-semibold text-slate-900 dark:text-slate-100 print:text-black">
                   {name}
                 </span>
-                <span className="text-slate-600 dark:text-slate-400 print:text-slate-700"> — </span>
+                <span className="text-slate-600 dark:text-slate-400 print:text-slate-700">: </span>
                 <span className="text-slate-600 dark:text-slate-400 print:text-slate-700">
                   {description}
                 </span>
@@ -183,7 +183,7 @@ export function Resume() {
 
       {/* Update note */}
       <p className="mt-12 text-xs text-slate-400 dark:text-slate-600 print:hidden text-center">
-        Placeholder sections are marked with brackets — fill in your actual experience and education details.
+        Placeholder sections are marked with brackets. Fill in your actual experience and education details.
       </p>
     </div>
   )

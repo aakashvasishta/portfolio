@@ -26,12 +26,12 @@ export function About() {
         </p>
         <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-4">
           I build dashboards and KPI frameworks that business users can act on without
-          requiring ongoing analyst support — the goal is always to embed the insight into
+          requiring ongoing analyst support. The goal is always to embed the insight into
           the workflow, not just the report.
         </p>
         <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
           This portfolio doubles as a proof-of-concept for code-driven visualization: all
-          charts are built in React with D3, Recharts, and Plotly — going beyond Tableau to
+          charts are built in React with D3, Recharts, and Plotly, going beyond Tableau to
           demonstrate full-stack data storytelling.
         </p>
       </div>

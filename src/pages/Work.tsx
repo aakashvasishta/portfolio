@@ -25,8 +25,8 @@ export function Work() {
           Case studies
         </h1>
         <p className="text-slate-500 dark:text-slate-400 max-w-xl text-base leading-relaxed">
-          Four real-project studies rebuilt as interactive narratives —
-          each with 5–6 charts across Recharts, Plotly, and D3, tied to
+          Four real-project studies rebuilt as interactive narratives,
+          each with 5-6 charts across Recharts, Plotly, and D3, tied to
           actual analysis work.
         </p>
       </div>

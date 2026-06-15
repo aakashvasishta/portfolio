@@ -42,7 +42,7 @@ export function Home() {
             {/* Tagline */}
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-xl">
               Turning messy, real-world data into decisions that non-technical
-              teams can act on — backed by KPI frameworks, root-cause analysis,
+              teams can act on, backed by KPI frameworks, root-cause analysis,
               and dashboards built to last.
             </p>
 
@@ -101,9 +101,9 @@ export function Home() {
         </div>
         <ChartFrame
           title="Revenue concentration by customer decile"
-          question="Where does revenue actually come from — and how concentrated is it?"
+          question="Where does revenue actually come from, and how concentrated is it?"
           method="Customer base ranked by revenue and split into 10 equal-sized groups (deciles); revenue share calculated per group."
-          takeaway="The top 20% of customers generate 80% of total revenue — the canonical Pareto finding, confirmed in a 50,000+ transaction dataset."
+          takeaway="The top 20% of customers generate 80% of total revenue. Confirmed in a 50,000+ transaction dataset."
           showDataNote
           height={280}
         >
@@ -147,7 +147,7 @@ export function Home() {
             Workforce Risk Explorer
           </h3>
           <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto">
-            A fully interactive, cross-filtered dashboard — filter by department,
+            A fully interactive, cross-filtered dashboard. Filter by department,
             tenure range, and comp band to drive linked panels live.
           </p>
         </Link>

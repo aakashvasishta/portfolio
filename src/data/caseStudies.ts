@@ -14,7 +14,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'ecommerce-revenue',
     title: 'E-Commerce Revenue & Segmentation',
-    subtitle: 'Where revenue concentrates — and who drives it',
+    subtitle: 'Where revenue concentrates and who drives it',
     description:
       '50,000+ transaction dataset mined to reveal that 20% of customers drive 80% of revenue. Pareto curves, cohort retention heatmaps, and RFM segmentation expose exactly which segments to prioritize.',
     tags: ['Pareto', 'Cohort', 'RFM', 'Segmentation', 'Treemap'],
@@ -26,9 +26,9 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'hr-attrition',
     title: 'HR Attrition Analytics',
-    subtitle: "What drives churn — and who's at risk",
+    subtitle: "What drives churn and who's at risk",
     description:
-      '1,400+ employee records analyzed to understand what drives attrition across tenure, department, compensation, and satisfaction — then surfaced in a dashboard non-technical managers can act on without analyst support.',
+      '1,400+ employee records analyzed to understand what drives attrition across tenure, department, compensation, and satisfaction. Surfaced in a dashboard non-technical managers can act on without analyst support.',
     tags: ['Survival Analysis', 'Statistical Viz', 'Dashboard', 'Risk Scoring'],
     chartCount: 5,
     highlight: 'Attrition risk modeled by tenure, comp & department',
@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'product-funnel',
     title: 'Product Funnel & Engagement',
-    subtitle: 'Where users fall out — and what fixes move the metric',
+    subtitle: 'Where users fall out and what fixes move the metric',
     description:
       'Funnel teardown of a learner journey to identify engagement drop-off and quantify the impact of proposed interventions. KPI scorecard ties every fix back to the North Star metric.',
     tags: ['Funnel', 'Sankey', 'KPI Design', 'Before/After'],
@@ -52,7 +52,7 @@ export const caseStudies: CaseStudy[] = [
     title: 'Education Program Outcomes',
     subtitle: 'Comparing programs, targeting interventions',
     description:
-      '500+ student records across 3 programs compared on completion rates and outcomes — and segmented to flag at-risk students for early intervention planning.',
+      '500+ student records across 3 programs compared on completion rates and outcomes, then segmented to flag at-risk students for early intervention planning.',
     tags: ['Comparison', 'Distributions', 'Segmentation', 'Interventions'],
     chartCount: 4,
     highlight: 'At-risk student segmentation across 3 programs',
